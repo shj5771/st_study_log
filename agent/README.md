@@ -45,7 +45,7 @@
 
 ## 🔍 학습 기록
 
-### 이전 학습 내용 (Claude와의 대화 기록)
+### 이전 학습 내용
 - 에이전트 아키텍처 설계 원칙 논의
 - ReAct 패턴과 Tool 사용법 학습
 - 다중 에이전트 시스템에서의 역할 분담 방식
@@ -55,10 +55,10 @@
 ### 2025-09-10
 - 에이전트 학습 로그 구조 정리
 - 실습 프로젝트 아이디어 구체화
-
+- LangChain을 사용한 에이전트 구현
+- Custom Tool 구조화
+- 
 ### 다음 학습 계획
-- LangChain을 사용한 첫 번째 에이전트 구현
-- Custom Tool 개발 실습
 - 에이전트 성능 측정 및 최적화
 
 ## 🤖 에이전트 설계 패턴
@@ -85,3 +85,4 @@ reviewer_agent = Agent(role="검토자")
 - [LangChain Agent 문서](https://python.langchain.com/docs/modules/agents/)
 - [CrewAI 문서](https://docs.crewai.com/)
 - [Multi-Agent Systems 논문](https://arxiv.org/search/cs?query=multi-agent+systems)
+
