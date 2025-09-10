@@ -12,7 +12,7 @@ ProjectRoot/                           # 프로젝트 루트
 │  README.md                           # 프로젝트 도움말 / 안내 문서
 │  build.sh                            # 빌드 실행 스크립트 (Linux/Mac)
 │  build.cmd                           # 빌드 실행 스크립트 (Windows)
-│  project.xml                         # 프로젝트 설정 파일 (ex: pom.xml)
+│  project.xml                         # 프로젝트 설정 파일 (예: pom.xml)
 │  structure.txt                       # 디렉토리 구조 출력본
 │
 ├─src/                                 # 소스 코드 루트
@@ -91,7 +91,46 @@ ProjectRoot/                           # 프로젝트 루트
 │  │  │      │  ├─entity/              # 채팅 엔티티
 │  │  │      │  │      ConversationEntity.java
 │  │  │      │  │      MessageEntity.java
-│  │  │      │  │      MessageTyp
+│  │  │      │  │      MessageType.java
+│  │  │      │  └─repository/          # 채팅 Repository
+│  │  │      │          MessageRepository.java
+│  │  │      │          ConversationRepository.java
+│  │  │      │
+│  │  │      ├─common/                 # 전역 유틸/예외 처리
+│  │  │      │  ├─exception/           # 전역 예외 처리
+│  │  │      │  │      GlobalExceptionHandler.java
+│  │  │      │  └─util/                # 전역 유틸리티
+│  │  │      │          TokenUtil.java
+│  │  │      │
+│  │  │      ├─admin/                  # 관리자 기능
+│  │  │      │  ├─dto/
+│  │  │      │  │      LogDto.java
+│  │  │      │  │      SignupRequestDto.java
+│  │  │      │  │      ApprovalRequestDto.java
+│  │  │      │  ├─controller/          # 관리자 API 컨트롤러
+│  │  │      │  │      AdminController.java
+│  │  │      │  ├─service/             # 관리자 서비스
+│  │  │      │  │      AdminService.java
+│  │  │      │  ├─entity/              # 관리자 엔티티
+│  │  │      │  │      LogEntity.java
+│  │  │      │  └─repository/          # 관리자 Repository
+│  │  │      │          LogRepository.java
+│  │  │      │
+│  │  │      └─out/production/app/     # IDE 빌드 산출물
+│  │  │              module.iml
+│  │  │
+│  │  └─resources/                     # 리소스 파일
+│  │      │  application.properties    # 스프링 설정
+│  │      ├─templates/                 # 템플릿 (Thymeleaf 등)
+│  │      └─static/                    # 정적 리소스 (CSS, JS, 이미지 등)
+│  │
+│  └─test/                             # 테스트 코드
+│      └─java/
+│          │  PasswordUtilTest.java    # 비밀번호 해시/유틸 테스트
+│          └─com/company/app/
+│                  ApplicationTests.java   # 통합 테스트
+│
+└─target/                              # 빌드 산출물 (생략)
 ```
 
 
@@ -189,5 +228,6 @@ admin_permissions (user_id, permission_level, granted_at)
 - 실시간 채팅 기능 고도화  
 - 모니터링 및 로깅 시스템 구축
 - API 문서화 자동화
+
 
 
