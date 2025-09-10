@@ -6,6 +6,94 @@
 - **언어**: Java
 - **형상관리**: Git (GitHub)
 
+## 백앤드 디렉토리(보안상 실제와 상이함)
+ProjectRoot/                           # 프로젝트 루트
+│  README.md                           # 프로젝트 도움말 / 안내 문서
+│  build.sh                            # 빌드 실행 스크립트 (Linux/Mac)
+│  build.cmd                           # 빌드 실행 스크립트 (Windows)
+│  project.xml                         # 프로젝트 설정 파일 (ex: pom.xml)
+│  structure.txt                       # 디렉토리 구조 출력본
+│
+├─src/                                 # 소스 코드 루트
+│  ├─main/                             # 메인 소스 디렉토리
+│  │  ├─java/                          # 자바 코드
+│  │  │  └─com/company/app/            # 패키지 루트
+│  │  │      │  module.iml             # IntelliJ 모듈 파일
+│  │  │      │  MainApplication.java   # Spring Boot 시작점
+│  │  │      │
+│  │  │      ├─auth/                   # 인증(Authentication) 모듈
+│  │  │      │  ├─dto/                 # 인증 요청/응답 DTO
+│  │  │      │  │      UserDto.java
+│  │  │      │  │      PasswordResetConfirmDto.java
+│  │  │      │  │      PasswordResetRequestDto.java
+│  │  │      │  │      TokenResponseDto.java
+│  │  │      │  │      LoginRequestDto.java
+│  │  │      │  │      RegisterRequestDto.java
+│  │  │      │  ├─controller/          # 인증 API 컨트롤러
+│  │  │      │  │      AuthController.java
+│  │  │      │  ├─service/             # 인증 서비스
+│  │  │      │  │      TokenService.java
+│  │  │      │  │      AuthService.java
+│  │  │      │  │      MailService.java
+│  │  │      │  ├─security/            # 보안/인증 관련
+│  │  │      │  │      TokenProvider.java
+│  │  │      │  │      TokenFilter.java
+│  │  │      │  │      SecurityConfig.java
+│  │  │      │  │      UserDetailsServiceImpl.java
+│  │  │      │  ├─entity/              # 인증 엔티티
+│  │  │      │  │      SignupRequestEntity.java
+│  │  │      │  │      UserEntity.java
+│  │  │      │  │      ResetTokenEntity.java
+│  │  │      │  └─repository/          # 인증 Repository
+│  │  │      │          ResetTokenRepository.java
+│  │  │      │          SignupRequestRepository.java
+│  │  │      │          UserRepository.java
+│  │  │      │
+│  │  │      ├─profile/                # 마이페이지(사용자 프로필) 기능
+│  │  │      │  ├─dto/
+│  │  │      │  ├─controller/          # 프로필 API 컨트롤러
+│  │  │      │  │      ProfileController.java
+│  │  │      │  ├─service/             # 프로필 서비스
+│  │  │      │  │      ProfileService.java
+│  │  │      │  ├─entity/
+│  │  │      │  └─repository/
+│  │  │      │
+│  │  │      ├─agent/                  # AI 에이전트 모듈
+│  │  │      │  ├─dto/
+│  │  │      │  ├─controller/          # 에이전트 API 컨트롤러
+│  │  │      │  │      AgentController.java
+│  │  │      │  ├─service/             # 에이전트 서비스
+│  │  │      │  │      AgentService.java
+│  │  │      │  ├─entity/
+│  │  │      │  ├─config/              # 에이전트 관련 설정
+│  │  │      │  │      WebConfig.java
+│  │  │      │  └─repository/
+│  │  │      │
+│  │  │      ├─chat/                   # 채팅 모듈
+│  │  │      │  ├─dto/
+│  │  │      │  │  ├─response/         # 채팅 응답 DTO
+│  │  │      │  │  │      ConversationListDto.java
+│  │  │      │  │  │      MessageDto.java
+│  │  │      │  │  │      MessageListDto.java
+│  │  │      │  │  │      ConversationDto.java
+│  │  │      │  │  └─request/          # 채팅 요청 DTO
+│  │  │      │  │          SendMessageDto.java
+│  │  │      │  │          CreateConversationDto.java
+│  │  │      │  │          UpdateConversationDto.java
+│  │  │      │  ├─controller/          # 채팅 API 컨트롤러
+│  │  │      │  │      MessageController.java
+│  │  │      │  │      ConversationController.java
+│  │  │      │  ├─service/             # 채팅 서비스
+│  │  │      │  │      ConversationService.java
+│  │  │      │  │      MessageService.java
+│  │  │      │  │      AIService.java
+│  │  │      │  ├─entity/              # 채팅 엔티티
+│  │  │      │  │      ConversationEntity.java
+│  │  │      │  │      MessageEntity.java
+│  │  │      │  │      MessageTyp
+
+
+
 ##  개발 진행 기록
 
 ### 1단계: 프로젝트 초기 설정
@@ -100,3 +188,4 @@ admin_permissions (user_id, permission_level, granted_at)
 - 실시간 채팅 기능 고도화  
 - 모니터링 및 로깅 시스템 구축
 - API 문서화 자동화
+
