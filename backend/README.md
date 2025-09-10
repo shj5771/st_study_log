@@ -7,6 +7,7 @@
 - **형상관리**: Git (GitHub)
 
 ## 백앤드 디렉토리(보안상 실제와 상이함)
+```
 ProjectRoot/                           # 프로젝트 루트
 │  README.md                           # 프로젝트 도움말 / 안내 문서
 │  build.sh                            # 빌드 실행 스크립트 (Linux/Mac)
@@ -91,7 +92,7 @@ ProjectRoot/                           # 프로젝트 루트
 │  │  │      │  │      ConversationEntity.java
 │  │  │      │  │      MessageEntity.java
 │  │  │      │  │      MessageTyp
-
+```
 
 
 ##  개발 진행 기록
@@ -188,4 +189,5 @@ admin_permissions (user_id, permission_level, granted_at)
 - 실시간 채팅 기능 고도화  
 - 모니터링 및 로깅 시스템 구축
 - API 문서화 자동화
+
 
