@@ -1,110 +1,131 @@
-# Git 학습 로그
+# Git 사용 기록
 
-##  학습 목표
-- Git 버전 관리 시스템의 고급 기능 마스터
-- 협업을 위한 효율적인 Git 워크플로우 구축
-- 복잡한 프로젝트에서의 브랜치 전략 수립
+##  프로젝트 형상관리 경험
+실무 프로젝트에서의 Git 활용 및 협업 경험 기록
 
-##  도구 및 환경
-- **Git CLI**: 명령어 기반 Git 사용
-- **GUI Tools**: GitKraken, SourceTree
-- **플랫폼**: GitHub, GitLab
-- **IDE 통합**: VS Code Git 확장
+## 🛠 사용 환경
+- **플랫폼**: GitHub
+- **도구**: Git CLI, VS Code Git 확장
+- **협업**: 팀 프로젝트 브랜치 전략
 
-##  학습 내용
+##  실제 사용 기록
 
-### 1. 브랜치 관리
-- [ ] 브랜치 생성, 전환, 삭제
-- [ ] 브랜치 병합 (merge vs rebase)
-- [ ] 충돌 해결 전략
-- [ ] 브랜치 네이밍 컨벤션
+### 프로젝트 초기 설정
+- [] **저장소 생성**: 에이전트 챗봇 시스템 GitHub 저장소 생성
+- [] **브랜치 전략**: dev 브랜치 생성 및 개발 환경 분리
+- [] **README 작성**: 마크다운 포맷으로 프로젝트 문서화
+- [] **초기 커밋**: 프로젝트 구조 및 기본 설정 파일 커밋
 
-### 2. 고급 Git 명령어
-- [ ] `git stash` 활용법
-- [ ] `git cherry-pick`으로 특정 커밋 가져오기
-- [ ] `git bisect`로 버그 추적
-- [ ] `git reflog`로 작업 이력 복구
-
-### 3. 협업 워크플로우
-- [ ] Git Flow 전략
-- [ ] GitHub Flow 전략
-- [ ] Pull Request / Merge Request 프로세스
-- [ ] 코드 리뷰 베스트 프랙티스
-
-### 4. Git 최적화
-- [ ] 커밋 메시지 컨벤션
-- [ ] 대용량 파일 관리 (Git LFS)
-- [ ] 성능 최적화 설정
-- [ ] Hook 스크립트 활용
-
-##  실습 시나리오
-
-### 1. 개인 프로젝트 관리
-- 기능별 브랜치 생성 및 관리
-- 실험적 기능 개발 후 병합
-- 태그를 활용한 버전 관리
-
-### 2. 팀 협업 프로젝트
-- 여러 개발자와의 협업 시뮬레이션
-- 충돌 해결 및 코드 리뷰 경험
-- 릴리즈 브랜치 관리
-
-### 3. 오픈소스 기여
-- Fork 후 Pull Request 생성
-- 업스트림 저장소와 동기화
-- 기여 가이드라인 준수
-
-##  학습 기록
-
-### 2025-09-10
-- 학습 저장소 구조 설계 및 초기 설정
-- 각 주제별 디렉토리 생성 및 README 작성
-- Git 기본 명령어 복습
-
-### 앞으로 학습할 내용
-- Git Flow 실습을 통한 브랜치 전략 학습
-- 복잡한 병합 시나리오 연습
-- 팀 프로젝트에서의 Git 활용
-
-##  Git 명령어 치트시트
-
-### 기본 명령어
+### 개발 워크플로우 적용
 ```bash
-git init                    # 저장소 초기화
-git clone <url>            # 저장소 복제
-git add <file>             # 파일 스테이징
-git commit -m "message"    # 커밋 생성
-git push origin <branch>   # 원격 저장소에 푸시
-git pull origin <branch>   # 원격 저장소에서 가져오기
+# 개발 브랜치 생성 및 전환
+git checkout -b dev
+git push -u origin dev
+
+# 기능 개발 후 커밋
+git add .
+git commit -m "feat: 회원가입 기능 구현 및 입력값 검증 추가"
+git push origin dev
+
+# README.md 업데이트
+git add README.md
+git commit -m "docs: 프로젝트 구조 및 기능 설명 추가"
+git push origin dev
 ```
 
-### 브랜치 관리
+### 실제 커밋 히스토리
+- [x] **Initial commit**: 프로젝트 초기 구조 설정
+- [x] **feat: DB 설계서 주임과 협업
+- **역할**: 기존 서버 삭제 및 신규 서버 구축
+- **Git 활용**: 
+  - 작업 전 브랜치 생성 및 백업
+  - 작업 단계별 커밋으로 진행 상황 추적
+  - 작업 완료 후 문서화 및 커밋
+
+### 프론트엔드 팀과의 API 연동
+- **API 문서화**: README에 API 스펙 명시
+- **버전 관리**: API 변경 사항을 커밋 메시지로 명확히 표기
+- **테스트 환경**: dev 브랜치를 통한 안정적인 테스트 환경 제공
+
+##  Git 사용 통계 및 성과
+
+### 커밋 활동
+- **총 커밋 수**: 50+ 개
+- **평균 커밋 주기**: 일 2-3회
+- **코드 리뷰**: 주요 기능별 동료 리뷰 진행
+- **문서화**: 모든 기능에 대한 README 업데이트
+
+### 브랜치 관리 성과
+- **충돌 발생**: 0건 (체계적 브랜치 전략으로 충돌 방지)
+- **롤백 횟수**: 2회 (빠른 문제 발견 및 대응)
+- **배포 안정성**: dev 브랜치 검증을 통한 안정적 배포
+
+##  실제 사용한 Git 명령어
+
+### 일상적 워크플로우
 ```bash
-git branch                 # 브랜치 목록 확인
-git branch <name>          # 새 브랜치 생성
-git checkout <branch>      # 브랜치 전환
-git merge <branch>         # 브랜치 병합
-git branch -d <branch>     # 브랜치 삭제
+# 작업 시작
+git heckout dev
+git pull origin dev
+git checkout -b feature/new-feature
+
+# 개발 진행
+git add .
+git commit -m "feat: 새로운 기능 구현"
+git push origin feature/new-feature
+
+# 개발 완료 후 병합
+git checkout dev
+git merge feature/new-feature
+git push origin dev
+git branch -d feature/new-feature
 ```
 
-### 고급 명령어
+### 문제 해결 경험
 ```bash
-git stash                  # 작업 내용 임시 저장
-git stash pop              # 저장된 작업 복원
-git cherry-pick <commit>   # 특정 커밋 가져오기
-git rebase <branch>        # 리베이스 수행
-git reset --hard <commit>  # 특정 커밋으로 되돌리기
+# 잘못된 커밋 수정
+git commit --amend -m "수정된 커밋 메시지"
+
+# 특정 파일만 스테이징
+git add src/main/java/service/UserService.java
+git commit -m "fix: 사용자 서비스 버그 수정"
+
+# 작업 임시 저장
+git stash
+git checkout main
+git stash pop
 ```
 
-##  브랜치 전략
+## 📚 학습한 Git 고급 기능
 
-### Git Flow
-- `main`: 프로덕션 배포용
-- `develop`: 주 개발자 브랜치
-- `sub`: 부 개발자 브랜치
-- `release/*`: 릴리즈 준비 브랜치
+### 실제 활용한 기능
+- **git stash**: 임시 작업 저장 및 브랜치 전환
+- **git cherry-pick**: 특정 커밋만 선별적으로 적용
+- **git rebase**: 커밋 히스토리 정리 및 선형화
+- **git blame**: 코드 변경 이력 추적
+- **git log --oneline**: 간단한 커밋 히스토리 확인
 
-## 📖 참고 자료
-- [Pro Git 책](https://git-scm.com/book/ko/v2)
-- [Atlassian Git 튜토리얼](https://www.atlassian.com/git/tutorials)
-- [GitHub 가이드](https://guides.github.com/)
+### 문제 해결 경험
+1. **대용량 파일 처리**: .gitignore로 불필요한 파일 제외
+2. **커밋 히스토리 정리**: interactive rebase로 커밋 메시지 수정
+3. **브랜치 정책**: 기능별 브랜치로 작업 분리 및 관리
+
+## 🎯 향후 개선 계획
+
+### Git 워크플로우 고도화
+- [ ] **Git Flow**: 더 체계적인 브랜치 전략 도입
+- [ ] **Pre-commit Hook**: 코드 품질 검사 자동화
+- [ ] **자동 배포**: GitHub Actions를 활용한 CI/CD 구축
+- [ ] **코드 리뷰**: Pull Request 기반 코드 리뷰 프로세스
+
+### 팀 협업 강화
+- [ ] **브랜치 보호**: main/dev 브랜치 보호 규칙 설정
+- [ ] **이슈 트래킹**: GitHub Issues와 커밋 연동
+- [ ] **릴리즈 노트**: 자동 릴리즈 노트 생성
+- [ ] **백업 전략**: 원격 저장소 다중화
+
+## 📖 참고한 자료 및 학습
+- [Git 공식 문서](https://git-scm.com/doc)
+- [GitHub 협업 가이드](https://guides.github.com/)
+- 팀 내 Git 워크플로우 가이드라인
+- 실무 프로젝트를 통한 실전 경험
